@@ -25,8 +25,6 @@ svg path {
   fill-opacity: 0;
   stroke: #000;
   stroke-width: 3;
-  stroke-dasharray: 4654;
-  stroke-dashoffset: 4654;
   animation-name: draw-svg;
   animation-duration: 10s;
   animation-fill-mode: forwards; // Stay on the last frame
@@ -35,7 +33,11 @@ svg path {
 }
 
 @keyframes draw-svg {
-  to {
+  0% {
+    stroke-dasharray: 4654;
+    stroke-dashoffset: 4654;
+  }
+  100% {
     stroke-dashoffset: 0;
   }
 }
