@@ -2,7 +2,13 @@
   margin-bottom: 0px;
 }
 
-#term {
+#everquote {
+  background: #4C7EB2;
+  box-shadow: 10px 10px 10px #000000c4;
+  overflow: hidden;
+}
+
+.term {
   box-shadow: 10px 10px 10px #000000c4;
   animation-name: term-pop;
   animation-duration: 2s;
