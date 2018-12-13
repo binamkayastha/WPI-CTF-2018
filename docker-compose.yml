@@ -2,6 +2,14 @@ version: '3'
 services:
   web:
     build: .
-    command: python3 -m http.server 80
+    command: python3 -m http.server 8081
     ports:
-      - "80:80"
+      - "8081:8081"
+    environment:
+      VIRTUAL_HOST: wpictf.xyz
+      LETSENCRYPT_HOST: wpictf.xyz
+      LETSENCRYPT_EMAIL: wpictf@wpi.edu
+networks:
+  default:
+    external:
+      name: nginx-proxy
